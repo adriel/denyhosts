@@ -34,6 +34,7 @@ if sys.version_info >= (3, 0):
                        "Accept-Encoding": "gzip"}
             url = "http://%s%s" % (host, handler)
             response = None
+            print(data)
             try:
                 response = requests.post(url, data=data, headers=headers, timeout=SOCKET_TIMEOUT)
                 response.raise_for_status()
